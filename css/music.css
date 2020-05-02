@@ -1,0 +1,117 @@
+/*
+FrontEnd 개발 및 JAVA 웹개발자 과정 박지혜
+wlgul817@gmail.com
+2019.12.29 final update
+
+PC SIZE VER
+*/
+
+html, body{ margin: 0px; padding: 0px; scroll-behavior: smooth;} /* a 태그 클릭 시 부드러운 스크롤링을 위해 scroll-behavior:smooth 사용 */
+*{font-family: 고딕;} /*전체 font 고딕체 적용*/
+
+/*tablet 부분 display:none*/
+.headerwrap_t, .firstsection_t, .secondsection_t, .thirdsection_t, .fourthsection_t, .fifthsection_t, .footerwrap_t {display:none;}
+
+/* header css */
+ul{list-style: none;}
+nav > ul > li {display: inline-block;}
+a{text-decoration: none; color:#000;} /* a 태그에 href를 주었을 때 underline 및 파랑색으로 색상이 변경되는 것을 없앰 */
+.fixheader {position: fixed; height: 60px; background-color: #fff; width: 100%; text-align: center; z-index: 1000;}
+.headerwrap {position:relative; width: 960px; margin: 0 auto;}
+.headerwrap > h3 {color: #f9af11; position: absolute; margin: 0; top:50%; transform: translateY(-50%); cursor: pointer;} /*높이를 맞추기 위해 tramsform 중 translateY를 사용*/
+.mainmenu {height: 60px;}
+.mainmenu > ul { margin: 0;}
+.mainmenu > ul > li {margin-right: 30px; width: 130px; height: 60px; line-height: 60px;}
+.mainmenu > ul > li a{padding: 20px;} /*li태그는 클릭이 되지 않으므로 a 태그에 패딩을 주어 클릭이 가능하게 함*/
+.mainmenu > ul > li a:hover{cursor: pointer;}
+.mainmenu > ul > li:hover {background-color: #ffcf71;}
+.mainmenu > ul > li:hover > ul {top: 60px;} /* li에 마우스오버 시 서브메뉴 나타남 */
+.mainmenu > ul > li:last-child {margin-right: 0px;}
+.applymenu > ul > li:hover{background-color: lightgrey;}
+.loginmenu {position: absolute; right: 0; top:50%; transform: translateY(-50%); font-size:12px;}
+.loginmenu > ul > li {margin: 0 5px;}
+
+.applymenu {position:absolute; padding: 0; top: -9999px; width: 130px; background-color: white; z-index:5;} /* for submenu hover */
+.applymenu > li {height:40px; line-height: 40px;}
+.applymenu > li:hover {background-color: lightgrey; cursor: pointer;} /* 커서를 손가락 모양으로 변경 */
+
+/*body*/
+.bodywrapper {padding-top: 60px; height: 100%; width: 100%;}
+.sectionwrap {width:990px; margin: 0 auto; position: relative;}
+
+/* home css (첫번째 부분)*/
+.firstsection {position: relative; height: 650px; width: 100%; min-width: 1000px; margin: 0 auto;}
+.realcontents > div {height: 650px;}
+.vidwrapper {overflow: hidden;}
+.topvid{object-fit: cover; min-width: 100%; min-height: 100%; position: absolute; top: 0; left: 0; overflow: hidden;}
+.textwrapper {position: absolute; width:100%; max-width: 990px; top: 130px; left:450px; z-index:1;} /*position: absolute를 사용하여 가로길이를 줄여도 현재 위치에 고정되어있도록 함 & z-index를 줘서 비디오 뒤로 들어가지 않게 함*/
+.textwrapper > div{display: inline-block;}
+.textwrapper > div > h2 {font:600 60px 고딕; margin-bottom: 10px;}
+.textwrapper > div > p {font: 500 28px 고딕; margin-top: 10px;}
+.textwrapper > div > .topbtn {border: none; border-radius: 50px; background-color: #f9af11; padding: 10px 30px; font-size: 20px; color: white; cursor: pointer;}
+.textwrapper > div > .topbtn:focus {outline: none;}
+
+/* about us css (두번째 부분)*/
+.secondsection {background-image: url("../images/bg.jpg"); background-size: cover;}
+.aboutsection1 > h3 {margin: 10px 0px; padding: 10px 0px 20px 10px; font-size:66px; font-weight: 800; background-color: #f9af11; color: #fff;}
+.aboutsection1:not(h3) {font-size: 30px; position: relative; margin: auto; top:100px; line-height:50px;}
+.imgsectionwrap {position: absolute; top:0px; left: 700px;}
+.imgsectionwrap > img {height:650px;}
+
+
+/* about us 2 css (세번째 부분)*/
+.thirdsection {background-image: url("../images/bg2.jpg"); background-size: cover;}
+.slidesection {position: relative; margin: auto; top:100px; background:#ffcf71;}
+.slidetop {text-align: center; font-size:35px; font-weight: 600; background-color: #fff; padding: 10px 0px;}
+.slidewrap {width:900px;margin:80px auto 17px;}
+.sliders{display: none; text-align: center;}
+.slidertxt1{font-size: 40px; }
+.slidertxt2{font-size: 25px; line-height: 45px;}
+
+#slideleft{position: relative; top: -190px; left: -70px; font-size: 50px; cursor: pointer;}
+#slideright{position: relative; top: -190px; left: 955px; font-size: 50px; cursor: pointer;}
+
+.fade {-webkit-animation-name: fade; -webkit-animation-duration: 1.5s; animation-name: fade; animation-duration: 1.5s;}
+@-webkit-keyframes fade{ /*fade 애니메이션, chrome에서 사용하기 위해 -webkit 수식어를 붙임*/
+    from{opacity: .5}
+    to{opacity: 1}
+}
+@keyframes fade{
+    from{opacity: .5}
+    to{opacity: 1}
+}
+
+/* apply css (네번째 부분)*/
+.fourthsection {background-color: #efefef;}
+.applytop {position: relative; width: 450px; top: 180px; font-size: 30px; line-height: 50px;}
+.applytop > b {font-size: 35px; font-weight:600; margin-bottom: 30px;}
+.applybox {position: absolute; top:45px; padding: 30px; background-color: #f9af11; left: 500px; width: 500px;}
+.applydiv {height: 500px;}
+#applyform {position: relative; top: 30px;}
+#applyform > table {margin: 0 auto; width: 450px; text-align: center; font-size: 16px;}
+#applyform > table tr {width: 450px; height: 53px;}
+#applyform > table input {width: 198px; border: 1px solid #ffcf71; padding: 10px 10px; color: #555; font-size: 16px;}
+#applyform > table select {width: 220px; border: 1px solid #ffcf71; padding: 10px 10px; color: #555; font-size: 16px;}
+#applyform > table input:focus {outline-color: orangered;} /* 신청하기 클릭 시 파란 focus 선의 색상을 변경 */
+::placeholder {color: #aaa;}
+
+.btnwrap {text-align: center; margin-top: 30px;}
+.submitbtn {width: 150px; padding: 10px 0px; font-size: 22px; color: #fff; background-color: #f9af11; border: 2px solid #fff; border-radius: 50px; cursor: pointer;}
+.submitbtn:hover {background-color: #fff; border: 2px solid #ffcf71; color: #f9af11;}
+.submitbtn:focus {outline: none;} /* 신청하기 클릭 시 파란 focus 선을 없애기 위해 outline 속성을 none으로 줌*/
+
+/* fnq css (다섯번째 부분)*/
+.fifthsection{background-image: url("../images/bg3.jpg"); background-size: cover;}
+.fnqwrap {position: relative; margin: auto; top: 60px;}
+.fnqtop {text-align: center; font-size:25px; padding: 10px 0px 20px;}
+.fnqtop > b {font-size: 35px; font-weight:600;}
+.fnqlist {width: 990px; height: 50px; font-size: 25px; border:1px solid #f9af11; border-radius: 50px; margin-top: 30px; background-color: #fff; color: #555; cursor: pointer;}
+.fnqlist.active {background-color: #f9af11; color: #fff;}
+.fnqlist:hover {background: #f9af11;}
+.fnqlist:focus {outline: none;}
+.fnqans {display: none; padding: 30px 30px 10px; font-size:16px; background: #fff; text-align: center;}
+.fnqans.show {display: block;}
+
+/* footer css */
+footer {border-top: 1px solid #aaa; text-align: center; color: #aaa; font-size: 12px;}
+footer a{color: #aaa; cursor: pointer;}

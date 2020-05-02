@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/music.css" rel="stylesheet" media="screen and (min-width:760px)">
+    <link href="./css/music_small.css" rel="stylesheet" media="screen and (max-width:760px)">
+    <title>Music</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="fixheader">
+            <div class="headerwrap">
+                <h3>MUSIC TO PET</h3>
+                <nav class="mainmenu">
+                    <ul>
+                        <li><a href="#dhome">Home</a></li>
+                        <li><a href="#dabout">About Us</a></li>
+                        <li><a href="#dapply">신청하기</a>
+                            <ul class="applymenu">
+                                <li>강아지</li>
+                                <li>고양이</li>
+                                <li>햄스터</li>
+                                <li>토끼</li>
+                                <li>다른동물들</li>
+                            </ul>
+                        </li>
+                        <li><a href="#dfnq">F&Q</a></li>
+                    </ul>
+                </nav>
+                <nav class="loginmenu">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li>|</li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- tablet -->
+            <div class="headerwrap_t">
+                <h3>MUSIC TO PET</h3>
+                <button onclick="getmenu()">MENU</button>
+                <nav class="mainmenu_t">
+                    <ul id="menu_t">
+                        <li><a href="#dhome_t">Home</a></li>
+                        <li><a href="#dabout_t">About Us</a></li>
+                        <li><a href="#dapply_t">신청하기</a></li>
+                        <li><a href="#dfnq_t">F&Q</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- tablet -->
+
+        </header>
+        <div class="bodywrapper">
+            <div class="realcontents">
+                <!-- 첫번째 부분 - 배경에 video 넣기 -->
+                <div id="dhome" class="firstsection">
+                    <div class="vidwrapper">
+                        <video class="topvid" autoplay="autoplay" loop="loop" muted="muted" width="1440" height="650">
+                            <source src="./videos/musicvid_filter.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="textwrapper">
+                        <div>
+                            <h2>반려동물에게 <br>노래를 선물하세요</h2>
+                            <p>세상에 하나뿐인 특별한 선물</p>
+                            <button class="topbtn" onclick="apply()">노래 신청하기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tablet -->
+                <div id="dhome_t" class="firstsection_t">
+                    <div class="vidwrapper">
+                        <video class="topvid" autoplay="autoplay" loop="loop" muted="muted" width="700" height="650">
+                            <source src="./videos/musicvid_filter.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="textwrapper">
+                        <div>
+                            <h2>반려동물에게 <br>노래를 선물하세요</h2>
+                            <p>세상에 하나뿐인 특별한 선물</p>
+                            <button class="topbtn" onclick="apply()">노래 신청하기</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- tablet -->
+
+                <!-- 두번째 부분 - img 넣기-->
+                <div id="dabout" class="secondsection">
+                    <div class="sectionwrap">
+                        <section class="aboutsection1">
+                            당신의 반려동물을 위한 <b>가장 특별한 서비스</b><br>
+                            <h3>M U S I C &nbsp;T O&nbsp; P E T</h3>
+                            누적 제작 건 <b>12,345곡</b><br>
+                            취향에 따른 <b>맞춤 제작</b> 가능<br>
+                            <b>동물들을 위한</b> 음역대 사용<br>
+                        </section>
+                        
+                        <section class="imgsectionwrap">
+                        <img src="./images/doglistning_orangeyellow2.png">
+                        </section>
+                    </div>
+                </div>
+
+                <!-- tablet -->
+                <div id="dabout_t" class="secondsection_t">
+                    <div class="sectionwrap">
+                        <section class="aboutsection1">
+                            당신의 반려동물을 위한 <b>가장 특별한 서비스</b><br>
+                            <h3>M U S I C &nbsp;T O&nbsp; P E T</h3>
+                            누적 제작 건 <b>12,345곡</b><br>
+                            취향에 따른 <b>맞춤 제작</b> 가능<br>
+                            <b>동물들을 위한</b> 음역대 사용<br>
+                        </section>
+                    </div>
+                </div>
+                <!-- tablet -->
+
+                <!-- 세번째 부분 - slide 효과 -->
+                <div id="dabout2" class="thirdsection">
+                    <div class="sectionwrap">
+                        <section class="slidesection">
+                            <div class="slidetop">More Information?</div>
+                            <div class="slidewrap">
+                                <div class="sliders fade"> <!-- 자연스러움을 위해 fade 효과를 넣음-->
+                                    <h3 class="slidertxt1">MUSIC TO PET에서만 만날 수 있는 특별한 경험!</h3>
+                                    <b class="slidertxt2">장난감이나 간식이 아닌 새로운 선물을 준비해 보세요!<br>
+                                    MTP는 반려동물만의 맞춤 제작 노래를 만들어 드립니다.<br>
+                                    현재 약 10,000명의 집사님들이 MTP의 서비스를 이용하고 있습니다.</b>
+                                </div>
+                                <div class="sliders fade">
+                                    <h3 class="slidertxt1">음악과 반려동물, 그리고 과학의 만남</h3>
+                                    <b class="slidertxt2">반려동물이 가장 편안함을 느낄 수 있도록 연구를 통해 밝혀진<br>
+                                    악기, 음역대 및 주파수를 이용하여 노래를 제작합니다.<br>
+                                    외출 시, 낮잠 시간, 놀이 시간에도 활용 가능합니다.</b>
+                                </div>
+                                <div class="sliders fade">
+                                    <h3 class="slidertxt1">음악에 대한 취향 존중</h3>
+                                    <b class="slidertxt2">가요, 클래식, 팝송, 힙합... 심지어는 EDM까지<br>
+                                    장르를 가리지 않고 취향에 맞추어 제작 해 드립니다.<br>
+                                    직접 작성한 가사를 붙여드리는 것도 가능합니다.</b>
+                                </div>
+                            </div>
+                            <a id="slideleft" onclick="slidePlus(-1)">◀</a> <!-- 클릭 시 slide 넘어가게 하기 위한 onclick 사용-->
+                            <a id="slideright" onclick="slidePlus(1)">▶</a>
+                        </section>
+                    </div>
+                </div>
+                
+                <!-- tablet -->
+                <div id="dabout2_t" class="thirdsection_t">
+                    <div class="sectionwrap">
+                        <section class="slidesection">
+                            <div class="slidetop">More Information?</div>
+                            <div class="slidewrap">
+                                <div class="sliders_t fade"> <!-- 자연스러움을 위해 fade 효과를 넣음-->
+                                    <h3 class="slidertxt1">MUSIC TO PET에서의 특별한 경험!</h3>
+                                    <b class="slidertxt2">장난감이나 간식이 아닌 새로운 선물을 준비해 보세요!<br>
+                                    MTP는 반려동물만의 맞춤 제작 노래를 만들어 드립니다.<br>
+                                    현재 약 10,000명의 집사님들이 이용하고 있습니다.</b>
+                                </div>
+                                <div class="sliders_t fade">
+                                    <h3 class="slidertxt1">음악과 반려동물, 그리고 과학의 만남</h3>
+                                    <b class="slidertxt2">반려동물이 가장 편안함을 느낄 수 있도록 연구를 통해 밝혀진<br>
+                                    악기, 음역대 및 주파수를 이용하여 노래를 제작합니다.<br>
+                                    외출 시, 낮잠 시간, 놀이 시간에도 활용 가능합니다.</b>
+                                </div>
+                                <div class="sliders_t fade">
+                                    <h3 class="slidertxt1">음악에 대한 취향 존중</h3>
+                                    <b class="slidertxt2">가요, 클래식, 팝송, 힙합... 심지어는 EDM까지<br>
+                                    장르를 가리지 않고 취향에 맞추어 제작 해 드립니다.<br>
+                                    직접 작성한 가사를 붙여드리는 것도 가능합니다.</b>
+                                </div>
+                            </div>
+                            <a id="slideleft_t" onclick="slidePlus_t(-1)">◀</a> <!-- 클릭 시 slide 넘어가게 하기 위한 onclick 사용-->
+                            <a id="slideright_t" onclick="slidePlus_t(1)">▶</a>
+                        </section>
+                    </div>
+                </div>
+                <!-- tablet -->
+                
+                <!-- 네번째 부분 - table 사용 -->
+                <div id="dapply" class="fourthsection">
+                    <div class="sectionwrap">
+                        <section class="applytop">
+                            <b>음악 제작 신청하기<br></b><br>
+                            비회원도 폼을 작성하면<br>간단하게 신청이 가능합니다.
+                        </section>
+                        <section class="applybox">
+                            <div class="applydiv"> <!-- 신청 양식을 위한 form 태그 -->
+                                <form id="applyform" name="applyform" method="post" action="iyetnothave.jsp">
+                                    <table>
+                                        <tr>
+                                            <td>이름</td>
+                                            <td><input type="text" placeholder="ex) 홍길동" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>전화번호</td>
+                                            <td><input type="text" placeholder="ex) 0103451234" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>이메일</td>
+                                            <td><input type="email" placeholder="ex) mtp123@naver.com" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>반려동물의 종류</td>
+                                            <td><select>
+                                                <option value="0" selected>선택</option>
+                                                <option value="dog">강아지</option>
+                                                <option value="cat">고양이</option>
+                                                <option value="hamster">햄스터</option>
+                                                <option value="rabbit">토끼</option>
+                                                <option value="etc">다른동물들</option>
+                                            </select></td>
+                                        </tr>
+                                        <tr>
+                                            <td>신청할 음악 종류</td>
+                                            <td><select>
+                                                <option value="0" selected>선택</option>
+                                                <option value="1">가요</option>
+                                                <option value="2">클래식</option>
+                                                <option value="3">팝송</option>
+                                                <option value="4">힙합</option>
+                                                <option value="5">EDM</option>
+                                                <option value="6">기타</option>
+                                            </select></td>
+                                        </tr>
+                                        <tr>
+                                            <td>메모</td>
+                                            <td><input type="text" placeholder="메모사항을 입력하세요"></td>
+                                        </tr>
+                                    </table>
+                                    <div class="btnwrap">
+                                        <input class="submitbtn" type="submit" value="신청하기">
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- tablet -->
+                <div id="dapply_t" class="fourthsection_t">
+                    <div class="sectionwrap">
+                        <section class="applybox">
+                            <div class="applydiv"> <!-- 신청 양식을 위한 form 태그 -->
+                                <h3>신청 폼 작성</h3>
+                                <form id="applyform" name="applyform" method="post" action="iyetnothave.jsp">
+                                    <table>
+                                        <tr>
+                                            <td>이름</td>
+                                            <td><input type="text" placeholder="ex) 홍길동" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>전화번호</td>
+                                            <td><input type="text" placeholder="ex) 0103451234" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>이메일</td>
+                                            <td><input type="email" placeholder="ex) mtp123@naver.com" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>반려동물의 종류</td>
+                                            <td><select>
+                                                <option value="0" selected>선택</option>
+                                                <option value="dog">강아지</option>
+                                                <option value="cat">고양이</option>
+                                                <option value="hamster">햄스터</option>
+                                                <option value="rabbit">토끼</option>
+                                                <option value="etc">다른동물들</option>
+                                            </select></td>
+                                        </tr>
+                                        <tr>
+                                            <td>신청할 음악 종류</td>
+                                            <td><select>
+                                                <option value="0" selected>선택</option>
+                                                <option value="1">가요</option>
+                                                <option value="2">클래식</option>
+                                                <option value="3">팝송</option>
+                                                <option value="4">힙합</option>
+                                                <option value="5">EDM</option>
+                                                <option value="6">기타</option>
+                                            </select></td>
+                                        </tr>
+                                        <tr>
+                                            <td>메모</td>
+                                            <td><input type="text" placeholder="메모사항을 입력하세요"></td>
+                                        </tr>
+                                    </table>
+                                    <div class="btnwrap">
+                                        <input class="submitbtn" type="submit" value="신청하기">
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- tablet -->
+
+                <!-- 다섯번째 부분 - accordion 효과 -->
+                <div id="dfnq" class="fifthsection">
+                    <div class="sectionwrap">
+                        <section class="fnqwrap">
+                            <div class="fnqtop">
+                                <b>F&Q</b><br>자주 묻는 질문들
+                            </div>
+                            <button class="fnqlist">제 반려동물이 어떤 노래를 좋아하는지 모르겠어요</button>
+                            <div class="fnqans">해당하시는 상황에서는, 신청 시 메모란에 적어주시면, MTP 내부의 통계 자료를 통해 신청자분의 반려동물 종류에서 가장 보편적으로 많이 신청이 들어온 음악 종류로 제작 해 드립니다.</div>
+                            
+                            <button class="fnqlist">사람에게 선물할 노래를 신청해도 되나요?</button>
+                            <div class="fnqans">사람도 동물이기 때문에 일단 신청은 가능합니다.</div>
+
+                            <button class="fnqlist">노래가 마음에 안 들어서 환불하고 싶어요</button>
+                            <div class="fnqans">제작 과정 중 1차 피드백 후 총 금액의 70%, 1차 수정 및 2차 피드백 후 총 금액의 30% 환불 가능이며 2차 수정이 끝난 후 노래 전달 완료 시에는 환불이 불가능합니다.</div>
+                            
+                            <button class="fnqlist">반려동물과 제 노래 취향이 달라요</button>
+                            <div class="fnqans">해당 부분은 반려동물과 직접 상의 및 조율 후 신청 부탁드립니다.</div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- tablet -->
+                <div id="dfnq_t" class="fifthsection_t">
+                    <div class="sectionwrap">
+                        <section class="fnqwrap">
+                            <div class="fnqtop">
+                                <b>F&Q</b><br>자주 묻는 질문들
+                            </div>
+                            <button class="fnqlist">제 반려동물이 어떤 노래를 좋아하는지 모르겠어요</button>
+                            <div class="fnqans">해당하시는 상황에서는, 신청 시 메모란에 적어주시면, MTP 내부의 통계 자료를 통해 신청자분의 반려동물 종류에서 가장 보편적으로 많이 신청이 들어온 음악 종류로 제작 해 드립니다.</div>
+                            
+                            <button class="fnqlist">사람에게 선물할 노래를 신청해도 되나요?</button>
+                            <div class="fnqans">사람도 동물이기 때문에 일단 신청은 가능합니다.</div>
+
+                            <button class="fnqlist">노래가 마음에 안 들어서 환불하고 싶어요</button>
+                            <div class="fnqans">제작 과정 중 1차 피드백 후 총 금액의 70%, 1차 수정 및 2차 피드백 후 총 금액의 30% 환불 가능이며 2차 수정이 끝난 후 노래 전달 완료 시에는 환불이 불가능합니다.</div>
+                            
+                            <button class="fnqlist">반려동물과 제 노래 취향이 달라요</button>
+                            <div class="fnqans">해당 부분은 반려동물과 직접 상의 및 조율 후 신청 부탁드립니다.</div>
+                        </section>
+                    </div>
+                </div>
+                <!-- tablet -->
+
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="footerwrap">
+                <nav>
+                    <ul>
+                        <li><a herf="#">이용약관</a></li>
+                        <li>|</li>
+                        <li><a herf="#">개인정보 처리방침</a></li>
+                        <li>|</li>
+                        <li><a herf="#">인재채용</a></li>
+                        <li>|</li>
+                        <li><a herf="#">제휴문의</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul>
+                        <li>서울특별시 강남구 역삼동 819-10 세경빌딩 3층</li>
+                        <li>|</li>
+                        <li>Tel: 031-123-4567</li>
+                        <li>|</li>
+                        <li>e-mail: music2pet@mtp.com</li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul>
+                        <li>© MUSIC TO PET All Rights Reserved.</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- tablet -->
+            <div class="footerwrap_t">
+                <nav>
+                    <ul>
+                        <li><a herf="#">이용약관</a></li>
+                        <li>|</li>
+                        <li><a herf="#">개인정보 처리방침</a></li>
+                        <li>|</li>
+                        <li><a herf="#">인재채용</a></li>
+                        <li>|</li>
+                        <li><a herf="#">제휴문의</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul>
+                        <li>서울특별시 강남구 역삼동 819-10 세경빌딩 3층</li>
+                        <li>|</li>
+                        <li>Tel: 031-123-4567</li>
+                        <li>|</li>
+                        <li>e-mail: music2pet@mtp.com</li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul>
+                        <li>© MUSIC TO PET All Rights Reserved.</li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- tablet -->
+
+        </footer>
+
+    </div>
+    <script src="./js/musicjs.js"></script> <!-- load가 다 되고 나서 실행되어야 하므로 body 태그 안에 작성-->
+</body>
+</html>

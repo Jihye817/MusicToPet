@@ -1,0 +1,107 @@
+/*
+FrontEnd 개발 및 JAVA 웹개발자 과정 박지혜
+wlgul817@gmail.com
+2019.12.29 final update
+
+TABLET SIZE VER
+pc 사이즈 버전에서 해당하는 부분만 수정하였고 나머지는 전부 같음
+*/
+
+html, body{ margin: 0px; padding: 0px; scroll-behavior: smooth;} /* a 태그 클릭 시 부드러운 스크롤링을 위해 scroll-behavior:smooth 사용 */
+*{font-family: 고딕;} /*전체 font 고딕체 적용*/
+
+/* pc 사이즈부분 display:none*/
+.headerwrap, .firstsection, .secondsection, .thirdsection, .fourthsection, .fifthsection, .footerwrap {display:none}
+
+/* header css */
+ul{list-style: none;}
+a{text-decoration: none; color:#000;} /* a 태그에 href를 주었을 때 underline 및 파랑색으로 색상이 변경되는 것을 없앰 */
+.fixheader {position: fixed; height: 60px; background-color: #f9af11; width: 100%; text-align: center; z-index: 1000;}
+.headerwrap_t{position:relative; width: 760px; margin: 0 auto; background-color: #f9af11;}
+.headerwrap_t > h3 {color: #fff; position: absolute; margin: 0; left:300px; top:50%; transform: translateY(-50%); cursor: pointer;} /*높이를 맞추기 위해 tramsform 중 translateY를 사용*/
+.headerwrap_t > button {position: absolute; top: 18px; left: 630px; font-size: 16px; background-color: #f9af11; font-weight: 500; border:none; cursor: pointer;} 
+.headerwrap_t > button {outline: none;}
+.mainmenu_t {height: 60px;}
+.mainmenu_t > ul {display: none; margin: 0; padding: 0; position: relative; top:60px; background-color: #fff;}
+.mainmenu_t > ul > li {height: 60px; line-height: 60px;}
+.mainmenu_t > ul > li a{padding: 20px 300px;} /*li태그는 클릭이 되지 않으므로 a 태그에 패딩을 주어 클릭이 가능하게 함*/
+.mainmenu_t > ul > li a:hover{cursor: pointer;}
+.mainmenu_t > ul > li:hover {background-color: #ffcf71;}
+
+/*body*/
+.bodywrapper {padding-top: 60px; height: 100%; width: 100%;}
+.sectionwrap {width:760px; text-align: center; position: relative;}
+
+/* home css (첫번째 부분)*/
+.firstsection_t {position: relative; height: 650px; width: 100%; min-width: 1000px; margin: 0 auto;}
+.realcontents > div {height: 650px;}
+.vidwrapper {overflow: hidden;}
+.topvid{object-fit: cover; width:760px; min-height: 100%; position: absolute; top: 0; left: 0; overflow: hidden;}
+.textwrapper {position: absolute; text-align: center; width: 760px; top: 130px; z-index:1;} /*position: absolute를 사용하여 가로길이를 줄여도 현재 위치에 고정되어있도록 함 & z-index를 줘서 비디오 뒤로 들어가지 않게 함*/
+.textwrapper > div{display: inline-block;}
+.textwrapper > div > h2 {font:600 60px 고딕; margin-bottom: 10px;}
+.textwrapper > div > p {font: 500 28px 고딕; margin-top: 10px;}
+.textwrapper > div > .topbtn {border: none; border-radius: 50px; background-color: #f9af11; padding: 10px 30px; font-size: 20px; color: white; cursor: pointer;}
+.textwrapper > div > .topbtn:focus {outline: none;}
+
+/* about us css (두번째 부분)*/
+.secondsection_t {background-image: url("../images/bg.jpg"); background-size: cover;}
+.aboutsection1 > h3 {margin: 10px 0px; padding: 10px 0px 20px 10px; font-size:66px; font-weight: 800; background-color: #f9af11; color: #fff;}
+.aboutsection1:not(h3) {font-size: 30px; position: relative; margin: auto; top:190px; line-height:50px;}
+
+
+/* about us 2 css (세번째 부분)*/
+.thirdsection_t {background-image: url("../images/bg2.jpg"); background-size: cover;}
+.slidesection {position: relative; margin: auto; top:100px; background:#ffcf71;}
+.slidetop {text-align: center; font-size:35px; font-weight: 600; background-color: #fff; padding: 10px 0px;}
+.slidewrap {width:700px;margin:80px auto 17px;}
+.sliders_t{display: none; text-align: center;}
+.slidertxt1{font-size: 40px; }
+.slidertxt2{font-size: 25px; line-height: 45px;}
+
+#slideleft_t{position: relative; top: -395px; left: -300px; font-size: 50px; cursor: pointer;}
+#slideright_t{position: relative; top: -395px; left: 270px; font-size: 50px; cursor: pointer;}
+
+.fade {-webkit-animation-name: fade; -webkit-animation-duration: 1.5s; animation-name: fade; animation-duration: 1.5s;}
+@-webkit-keyframes fade{ /*fade 애니메이션, chrome에서 사용하기 위해 -webkit 수식어를 붙임*/
+    from{opacity: .5}
+    to{opacity: 1}
+}
+@keyframes fade{
+    from{opacity: .5}
+    to{opacity: 1}
+}
+
+/* apply css (네번째 부분)*/
+.fourthsection_t {background-color: #efefef;}
+.applybox {position: absolute; top:45px; padding: 30px; background-color: #f9af11; left: 85px; width: 500px;}
+.applydiv {height: 500px;}
+#applyform {position: relative; top: 30px;}
+#applyform > table {margin: 0 auto; width: 450px; text-align: center; font-size: 16px;}
+#applyform > table tr {width: 450px; height: 53px;}
+#applyform > table input {width: 198px; border: 1px solid #ffcf71; padding: 10px 10px; color: #555; font-size: 16px;}
+#applyform > table select {width: 220px; border: 1px solid #ffcf71; padding: 10px 10px; color: #555; font-size: 16px;}
+#applyform > table input:focus {outline-color: orangered;} /* 신청하기 클릭 시 파란 focus 선의 색상을 변경 */
+::placeholder {color: #aaa;}
+
+.btnwrap {text-align: center; margin-top: 30px;}
+.submitbtn {width: 150px; padding: 10px 0px; font-size: 22px; color: #fff; background-color: #f9af11; border: 2px solid #fff; border-radius: 50px; cursor: pointer;}
+.submitbtn:hover {background-color: #fff; border: 2px solid #ffcf71; color: #f9af11;}
+.submitbtn:focus {outline: none;} /* 신청하기 클릭 시 파란 focus 선을 없애기 위해 outline 속성을 none으로 줌*/
+
+/* fnq css (다섯번째 부분)*/
+.fifthsection_t{background-image: url("../images/bg3.jpg"); background-size: cover;}
+.fnqwrap {position: relative; margin: auto; top: 100px;}
+.fnqtop {text-align: center; font-size:25px; padding: 10px 0px 20px;}
+.fnqtop > b {font-size: 35px; font-weight:600;}
+.fnqlist {width: 760px; height: 50px; font-size: 25px; border:1px solid #f9af11; margin-top: 30px; background-color: #fff; color: #555; cursor: pointer;}
+.fnqlist.active {background-color: #f9af11; color: #fff;}
+.fnqlist:hover {background: #f9af11;}
+.fnqlist:focus {outline: none;}
+.fnqans {display: none; padding: 30px 30px 10px; font-size:16px; background: #fff; text-align: center;}
+.fnqans.show {display: block;}
+
+/* footer css */
+footer {border-top: 1px solid #aaa; text-align: center; color: #aaa; font-size: 12px;}
+footer a{color: #aaa; cursor: pointer;}
+.footerwrap_t > nav > ul > li {display: inline-block;}
